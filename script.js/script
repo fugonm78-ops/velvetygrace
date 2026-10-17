@@ -1,0 +1,411 @@
+const serviciosDetalle = {
+    'manicura-spa': {
+        titulo: 'Manicura Spa',
+        imagen: 'img/spaaa.jpeg',
+        descripcion: 'La Manicura Spa es el tratamiento definitivo para quienes buscan un cuidado profundo y un momento de absoluta desconexión. No se trata solo de embellecer tus uñas; es un ritual terapéutico que rejuvenece la piel de tus manos, activa la circulación y libera el estrés del día a día.',
+        duracion: '45 - 60 min',
+        recomendadoPara: 'Este servicio está recomendado para personas con manos secas o deshidratadas, quienes sufren de tensión muscular por trabajo manual, y cualquiera que busque aliviar el estrés.',
+        cuidados: 'Para mantener tus manos perfectas, hidrátalas a diario con crema y aceite de cutículas, usa guantes al limpiar con químicos y evita el agua muy caliente las primeras 24 horas.',
+        precios: [
+            { tipo: 'Tratamientos de exfoliación y renovación', precio: 'L 250.00 - L 450.00' },
+            { tipo: 'Tratamientos de hidratación profunda', precio: 'L 430.00 - L 600.00' },
+            { tipo: 'Terapias de relajación y masaje', precio: 'L 700.00 - L 1,200.00' }
+        ],
+        incluye: [
+            'Limpieza y preparación',
+            'Baño aromático',
+            'Exfoliación',
+            'Hidratación profunda',
+            'Masaje relajante',
+            'Esmaltado final'
+        ]
+    },
+    'pedicura-spa': {
+        titulo: 'Pedicura Spa',
+        imagen: 'img/Imagen-pedicura-Spa2.jpg',
+        descripcion: 'La Pedicura Spa es el tratamiento definitivo para liberar la tensión acumulada, aliviar el cansancio y devolverle la suavidad extrema a tus pies.',
+        duracion: '60 min',
+        recomendadoPara: 'Este servicio está recomendado para personas con pies cansados o adoloridos por pasar largas horas de pie o usar tacones, así como para quienes sufren de talones agrietados o resecos.',
+        cuidados: 'Te recomendamos asistir con calzado abierto, hidratar tus pies a diario por las noches con crema humectante o vaselina y no cortar tus cutículas.',
+        precios: [
+            { tipo: 'Pedicura Spa Clásica', precio: 'L 450.00 - L 550.00' },
+            { tipo: 'Pedicura Spa Premium + Semipermanente', precio: 'L 650.00 - L 780.00' },
+            { tipo: 'Pedicura Jelly Spa', precio: 'L 680.00 - L 900.00' }
+        ],
+        incluye: [
+            'Hidromasaje y tina',
+            'Eliminación de asperezas',
+            'Exfoliación profunda',
+            'Mascarilla térmica',
+            'Masaje de reflexología',
+            'Esmaltado final'
+        ]
+    },
+    'unas-Postizas': {
+        titulo: 'Uñas Postizas',
+        imagen: 'img/Imagen-uñassss.jpeg',
+        descripcion: 'Trabajamos con materiales de alta gama que garantizan la salud de tu uña natural, adaptando el largo, grosor y diseño a tu estilo personal.',
+        duracion: '90 - 120 min',
+        recomendadoPara: 'Nail Art elaborado o diseños en tendencia de larga duración, ideal para eventos especiales como bodas, graduaciones o cumpleaños.',
+        cuidados: 'Evita usarlas como herramientas para abrir latas, usa guantes de goma para lavar platos y no intentes arrancártelas.',
+        precios: [
+            { tipo: 'Uñas Acrílicas Full Set', precio: 'L 500.00 - L 950.00' },
+            { tipo: 'Uñas de Poligel / Polygel', precio: 'L 500.00 - L 750.00' },
+            { tipo: 'Kapping Gel o Baño de Acrílico', precio: 'L 350.00 - L 450.00' },
+            { tipo: 'Extensiones en Soft Gel', precio: 'L 450.00 - L 650.00' },
+            { tipo: 'Uñas Press-On Básicas', precio: 'L 80.00 - L 200.00' }
+        ],
+        incluye: [
+            'Manicura Rusa o combinada',
+            'Preparación de la uña natural',
+            'Colocación y esculpido',
+            'Limado técnico',
+            'Esmaltado permanente',
+            'Nutrición final'
+        ]
+    },
+    'cejas': {
+        titulo: 'Cejas',
+        imagen: 'img/cejass.jpeg',
+        descripcion: 'Nuestro servicio profesional se basa en el visagismo personalizado, una técnica artística que analiza tus facciones para crear el diseño de cejas ideal.',
+        duracion: '30 - 45 min',
+        recomendadoPara: 'Recomendable para personas con cejas rebeldes o desordenadas, así como para quienes tienen cejas finas o con espacios vacíos.',
+        cuidados: 'Evita mojar la zona durante las primeras 24 horas y no apliques maquillaje ni desmaquillantes durante el primer día.',
+        precios: [
+            { tipo: 'Diseño y Depilación con Hilo o Cera', precio: 'L 150.00 - L 300.00' },
+            { tipo: 'Laminado de Cejas', precio: 'L 350.00 - L 500.00' },
+            { tipo: 'Sombreado con Henna o Tinte Premium', precio: 'L 550.00 - L 900.00' }
+        ],
+        incluye: [
+            'Estudio de visagismo',
+            'Depilación y perfilado técnico',
+            'Recorte y texturizado',
+            'Hidratación y calma'
+        ]
+    },
+    'pestañas': {
+        titulo: 'Pestañas',
+        imagen: 'img/Pestañas-1.jpg',
+        descripcion: 'Nos especializamos en técnicas avanzadas de aislamiento y colocación que protegen y respetan la salud de tu pestaña natural.',
+        duracion: '60 - 90 min',
+        recomendadoPara: 'Personas con pestañas cortas, rectas o escasas que desean alargar y enmarcar su mirada de manera inmediata.',
+        cuidados: 'Evita mojarlas, exponerte a vapor o usar saunas durante las primeras 24 a 48 horas.',
+        precios: [
+            { tipo: 'Lifting de Pestañas', precio: 'L 350.00 - L 500.00' },
+            { tipo: 'Extensiones Clásicas', precio: 'L 500.00 - L 800.00' },
+            { tipo: 'Extensiones de Volumen', precio: 'L 800.00 - L 1,200.00' }
+        ],
+        incluye: [
+            'Asesoría de visagismo',
+            'Limpieza y preparación',
+            'Aplicación premium',
+            'Peinado y sellado'
+        ]
+    },
+    'maquillaje': {
+        titulo: 'Maquillajes',
+        imagen: 'img/Imagen-maquillaje-3.jpg',
+        descripcion: 'Convertimos el maquillaje en una experiencia de empoderamiento. Nuestro objetivo es potenciar tus mejores facciones y reflejar tu esencia.',
+        duracion: '60 - 120 min',
+        recomendadoPara: 'Novias, quinceañeras, graduadas e invitadas a eventos que buscan un acabado de alta definición y larga duración.',
+        cuidados: 'Evita tocarte el rostro constantemente y utiliza papel secante si notas brillo en la zona T.',
+        precios: [
+            { tipo: 'Maquillaje Social o de Noche', precio: 'L 600.00 - L 1,000.00' },
+            { tipo: 'Maquillaje de Novias y Quinceañeras', precio: 'L 1,000.00 - L 1,600.00' },
+            { tipo: 'Maquillaje Social Express o de Día', precio: 'L 500.00 - L 800.00' }
+        ],
+        incluye: [
+            'Preparación de la piel (Skincare)',
+            'Maquillaje personalizado',
+            'Pestañas postizas de cortesía',
+            'Sellado profesional'
+        ]
+    },
+    'peinado': {
+        titulo: 'Peinados',
+        imagen: 'img/Peinadoss.jpeg',
+        descripcion: 'Diseñamos el peinado ideal combinando las últimas tendencias con la forma de tu rostro y el tipo de escote de tu vestimenta.',
+        duracion: '45 - 60 min',
+        recomendadoPara: 'Ideal para eventos de gala, bodas, graduaciones o sesiones fotográficas.',
+        cuidados: 'Evita manipular el cabello constantemente para prevenir el frizz y protégelo de la humedad extrema.',
+        precios: [
+            { tipo: 'Ondas, Alisados o Blower', precio: 'L 250.00 - L 500.00' },
+            { tipo: 'Semi-recogidos y Trenzas', precio: 'L 550.00 - L 850.00' },
+            { tipo: 'Recogidos de Gala o Moños Altos', precio: 'L 850.00 - L 1,500.00' },
+            { tipo: 'Peinados Novias / Quinceañeras', precio: 'L 1,800.00 - L 3,500.00' }
+        ],
+        incluye: [
+            'Asesoría de estilo',
+            'Preparación del cabello',
+            'Estilizado profesional',
+            'Fijación de alta duración',
+            'Colocación de accesorios'
+        ]
+    },
+    'cuidado-facial': {
+        titulo: 'Cuidado Facial',
+        imagen: 'img/Cuidado-1.jpg',
+        descripcion: 'Nuestros servicios combinan técnicas estéticas avanzadas con productos profesionales para tratar las necesidades de tu piel.',
+        duracion: '60 min',
+        recomendadoPara: 'Personas con cutis graso, acné, o piel seca y opaca que necesita hidratación y luminosidad.',
+        cuidados: 'Evita la exposición directa al sol durante 48 horas y aplica protector solar constantemente.',
+        precios: [
+            { tipo: 'Limpieza Facial Profunda Básica', precio: 'L 450.00 - L 650.00' },
+            { tipo: 'Tratamiento Hidrafacial', precio: 'L 700.00 - L 1,200.00' },
+            { tipo: 'Facial Antiedad Colágeno', precio: 'L 850.00 - L 1,500.00' },
+            { tipo: 'Tratamiento Control Acné', precio: 'L 600.00 - L 1,000.00' }
+        ],
+        incluye: [
+            'Diagnóstico de piel previo',
+            'Higienización y exfoliación',
+            'Apertura de poros',
+            'Extracción minuciosa',
+            'Terapia descongestiva y nutrición',
+            'Masaje facial y sellado'
+        ]
+    },
+    'depilacion': {
+        titulo: 'Depilación',
+        imagen: 'img/Depilacion-1.jpg',
+        descripcion: 'Ofrecemos una experiencia higiénica, cómoda y personalizada para dejar tu piel libre de vello y suave al tacto.',
+        duracion: '20 - 45 min',
+        recomendadoPara: 'Hombres y mujeres que buscan eliminar el vello de forma segura y duradera.',
+        cuidados: 'Durante las primeras 24-48 horas evita el sol, agua muy caliente, ejercicio intenso y productos con alcohol.',
+        precios: [
+            { tipo: 'Depilación con Cera', precio: 'L 250.00 - L 600.00' },
+            { tipo: 'Depilación Láser', precio: 'L 1,500.00 - L 3,500.00' }
+        ],
+        incluye: [
+            'Evaluación inicial de la piel',
+            'Higienización y desinfección profunda',
+            'Hidratación y alivio inmediato'
+        ]
+    }
+};
+
+
+function abrirModal(idServicio) {
+    const data = serviciosDetalle[idServicio];
+    const modal = document.getElementById('modalServicio');
+    const modalBody = document.getElementById('modalBody');
+
+    if (!data) return;
+
+    const listaPreciosHtml = data.precios && data.precios.length > 0
+        ? data.precios.map(p => `<li><span>${p.tipo}</span> <strong>${p.precio}</strong></li>`).join('')
+        : '<li><span>Consultar precio</span></li>';
+
+    const listaIncluyeHtml = data.incluye && data.incluye.length > 0
+        ? data.incluye.map(item => `<li>• ${item}</li>`).join('')
+        : '';
+
+    modalBody.innerHTML = `
+        ${data.imagen ? `<img src="${data.imagen}" alt="${data.titulo}" style="width: 100%; height: 220px; object-fit: cover; border-radius: 12px; margin-bottom: 15px;">` : ''}
+        
+        <h2 class="modal-title">${data.titulo || 'Servicio'}</h2>
+        
+        <p style="font-size: 14px; color: #6d5b50; margin-bottom: 15px; line-height: 1.6;">${data.descripcion || ''}</p>
+        
+        ${data.duracion ? `
+            <p style="font-size: 13px; color: var(--dorado); font-weight: 600; margin-bottom: 15px;">
+                ⏱️ Duración estimada: ${data.duracion}
+            </p>
+        ` : ''}
+
+        ${data.recomendadoPara ? `
+            <div style="background: #fdf8f5; padding: 12px 15px; border-left: 3px solid var(--dorado); margin-bottom: 15px; border-radius: 4px;">
+                <strong style="font-size: 13px; color: var(--texto-oscuro);">Ideal para:</strong>
+                <p style="font-size: 13px; color: #6d5b50; margin: 4px 0 0 0;">${data.recomendadoPara}</p>
+            </div>
+        ` : ''}
+
+        <h4 style="color: var(--texto-oscuro); margin-top: 15px; font-family: 'Playfair Display', serif;">Precios y Opciones</h4>
+        <ul class="modal-info-list">
+            ${listaPreciosHtml}
+        </ul>
+
+        ${listaIncluyeHtml ? `
+            <h4 style="color: var(--texto-oscuro); margin-top: 15px; font-family: 'Playfair Display', serif;">El servicio incluye:</h4>
+            <ul style="list-style: none; padding: 0; font-size: 13px; color: #6d5b50; line-height: 1.8;">
+                ${listaIncluyeHtml}
+            </ul>
+        ` : ''}
+    `;
+
+    modal.style.display = 'flex';
+}
+
+function cerrarModal() {
+    const modal = document.getElementById('modalServicio');
+    modal.style.display = 'none';
+}
+
+
+/* --- DATOS Y LÓGICA DEL CATÁLOGO / CARRUSEL --- */
+const catalogoDetalle = {
+    'manicura-spa': {
+        titulo: 'Catálogo de Manicura Spa',
+        descripcion: 'Explora nuestros diseños, acabados y tratamientos especiales de hidratación para manos.',
+        fotos: [
+            { url: 'img/Manicura-francesa.jpeg', titulo: 'Manicura Francesa Reinventada', info: 'Línea fina moderna sobre base nude y acabado ultra brillante.' },
+            { url: 'img/Efecto-cromo.jpeg', titulo: 'Efecto Cromo / Glazed Donut', info: 'Pigmento aperlado sobre gel de larga duración.' },
+            { url: 'img/babybomerrrrrrrrrrrrrrt.jpeg', titulo: 'Esculpido Baby Boomer', info: 'Degradado suave en Polygel con manicura rusa incluida.' },
+            { url: 'img/jellyspamanos.jpeg', titulo: 'Tratamiento Jelly Spa', info: 'Terapia de hidratación profunda con gelatina aromática y masaje.' }
+        ]
+    },
+    'pedicura-spa': {
+        titulo: 'Catálogo de Pedicura Spa',
+        descripcion: 'Galería de acabados, terapias de relajación y tratamientos de hidratación profunda para tus pies.',
+        fotos: [
+            { url: 'img/Imagen-gelly.jpeg', titulo: 'Experiencia Jelly Spa', info: 'Baño de gelatina aromática con masaje de reflexología.' },
+            { url: 'img/semipermanente.jpeg', titulo: 'Esmaltado Semipermanente', info: 'Color e hidratación de alta duración.' },
+            { url: 'img/talones.jpeg', titulo: 'Tratamiento de Parafina Caliente', info: 'Nutrición e hidratación profunda para talones secos.' },
+            { url: 'img/pedicurarusa.jpeg', titulo: 'Pedicura Rusa Combinada', info: 'Limpieza de alta precisión con torno y pulido perfecto.' }
+        ]
+    },
+    'unas-Postizas': {
+        titulo: 'Catálogo de Uñas Postizas',
+        descripcion: 'Diseños exclusivos en acrílico, soft gel, polygel y tendencias de Nail Art.',
+        fotos: [
+            { url: 'img/babybomerrr.jpeg', titulo: 'Efecto Baby Boomer Elegante', info: 'Degradado suave en acrílico esculpido con manicura combinada.' },
+            { url: 'img/efectoAperlado.jpeg', titulo: 'Soft Gel con Efecto Cromo', info: 'Extensiones ligeras en forma almendrada con pigmento aperlado.' },
+            { url: 'img/hojadeoro.jpeg', titulo: 'Nail Art Glamour & Cristales', info: 'Incrustación de pedrería fina y encapsulados en hoja de oro.' },
+            { url: 'img/lineasabstractas.jpeg', titulo: 'French Remix & Trazos Finos', info: 'Líneas abstractas dibujadas a mano sobre base translúcida.' }
+        ]
+    },
+    'cejas': {
+        titulo: 'Catálogo de Cejas',
+        descripcion: 'Diseño de visagismo, laminados de volumen y pigmentación natural para realzar tu mirada.',
+        fotos: [
+            { url: 'img/laminado.jpeg', titulo: 'Laminado de Cejas & Queratina', info: 'Direccionamiento de vello para mayor volumen y fijación.' },
+            { url: 'img/laminadoconhenna.jpeg', titulo: 'Diseño & Sombreado con Henna', info: 'Medición personalizada y tinte vegetal con efecto sombra.' },
+            { url: 'img/laminadomastinte.jpeg', titulo: 'Combo Full Brow (Laminado + Tinte)', info: 'Transformación completa: alineación, tinte orgánico y perfilado técnico.' },
+            { url: 'img/microblanding.jpeg', titulo: 'Efecto Microblading Pelo a Pelo', info: 'Trazo de precisión ultra natural para rellenar espacios vacíos.' }
+        ]
+    },
+    'pestañas': {
+        titulo: 'Catálogo de Pestañas',
+        descripcion: 'Diseños de curvatura, lifting natural y extensiones pelo a pelo para enmarcar tu mirada.',
+        fotos: [
+            { url: 'img/lifting.jpeg', titulo: 'Lifting de Pestañas & Queratina', info: 'Curvatura natural y tinte negro de alta duración.' },
+            { url: 'img/peloapelo.jpeg', titulo: 'Efecto Clásico 1:1 (Pelo a Pelo)', info: 'Definición y largo natural adherido pestaña por pestaña.' },
+            { url: 'img/hibrido.jpeg', titulo: 'Efecto Híbrido con Textura', info: 'Combinación de técnica clásica y volumen suave para dar dimensión.' },
+            { url: 'img/efectosirena.jpeg', titulo: 'Efecto Sirena / Wispy Lashes', info: 'Picos de largo intercalados para una mirada rasgada y coqueta.' }
+        ]
+    },
+    'maquillaje': {
+        titulo: 'Catálogo de Maquillaje',
+        descripcion: 'Looks sociales, de noche, eventos de gala y maquillaje atemporal para novias.',
+        fotos: [
+            { url: 'img/glam.jpeg', titulo: 'Soft Glam & Piel Luminosa', info: 'Acabado fresco de alta definición con tonos neutros y labios nude.' },
+            { url: 'img/eyes.jpeg', titulo: 'Smokey Eyes & Gala', info: 'Difuminado ahumado en tonos bronce con pestañas 3D de alto impacto.' },
+            { url: 'img/hollywod.jpeg', titulo: 'Hollywood Glam Clásico', info: 'Delineado fino cat-eye, piel aterciopelada y labial rojo indeleble.' },
+            { url: 'img/novia.jpeg', titulo: 'Bridal Elegance (Novias)', info: 'Técnica a prueba de agua y lágrimas con acabado romántico atemporal.' }
+        ]
+    },
+    'peinado': {
+        titulo: 'Catálogo de Peinados',
+        descripcion: 'Ondas glamour, semi-recogidos románticos y recogidos de alta gala para eventos especiales.',
+        fotos: [
+            { url: 'img/ondasdeagua.jpeg', titulo: 'Ondas al Agua Glamour', info: 'Estilo clásico pulido de alfombra roja con sellado de alto brillo.' },
+            { url: 'img/semirecogido.jpeg', titulo: 'Semi-Recogido Romántico', info: 'Cruzados suaves en la parte posterior combinados con ondas sueltas.' },
+            { url: 'img/moñoalto.jpeg', titulo: 'Moño Alto Pulido (Sleek Bun)', info: 'Recogido estirado de alta fijación con efecto lifting inmediato.' },
+            { url: 'img/moñobajo.jpeg', titulo: 'Moño Bajo Desenfadado (Low Bun)', info: 'Textura suave con mechones frontales, ideal para novias y graduadas.' }
+        ]
+    },
+    'cuidado-facial': {
+        titulo: 'Catálogo de Cuidado Facial',
+        descripcion: 'Limpiezas profundas, hidrafaciales y tratamientos de luminosidad para renovar tu piel.',
+        fotos: [
+            { url: 'img/facial1.jpeg', titulo: 'Limpieza Ultrasónica & Extracción', info: 'Desintoxicación profunda con vapor de ozono y alta frecuencia.' },
+            { url: 'img/facial2.jpeg', titulo: 'Hidrafacial & Ácido Hialurónico', info: 'Hidrodermoabrasión con infusión de sueros para un efecto piel de cristal.' },
+            { url: 'img/facial3.jpeg', titulo: 'Fototerapia LED & Velo de Colágeno', info: 'Estimulación celular con luz LED para regenerar la elasticidad de la piel.' },
+            { url: 'img/facial4.jpeg', titulo: 'Facial Antiedad Tensor', info: 'Mascarilla hidroplástica nutritiva con efecto reafirmante e iluminador.' }
+        ]
+    },
+    'depilacion': {
+        titulo: 'Catálogo de Depilación',
+        descripcion: 'Técnicas de cera elástica, hilo orgánico y fotodepilación para una piel suave y libre de vello.',
+        fotos: [
+            { url: 'img/depilacion1.jpeg', titulo: 'Depilación Facial & Hilo Orgánico', info: 'Técnica precisa de origen oriental para remover el vello facial fino sin irritación.' },
+            { url: 'img/depilacion2.jpeg', titulo: 'Cera Elástica de Baja Temperatura', info: 'Fórmula enriquecida con caléndula que remueve desde la raíz cuidando la piel delicada.' },
+            { url: 'img/depilacion3.jpeg', titulo: 'Depilación Corporal Completa', info: 'Cera tibia de miel para piernas y axilas con acabado suave por semanas.' },
+            { url: 'img/depilacion4.jpeg', titulo: 'Depilación Definitiva Láser Diodo', info: 'Reducción progresiva e indolora del vello mediante tecnología de enfriamiento.' }
+        ]
+    }
+};
+
+let carruselActual = {
+    categoria: null,
+    indice: 0
+};
+
+function abrirModalCatalogo(idCatalogo) {
+    const data = catalogoDetalle[idCatalogo];
+    if (!data || !data.fotos || data.fotos.length === 0) return;
+
+    carruselActual.categoria = idCatalogo;
+    carruselActual.indice = 0;
+
+    renderizarCarrusel();
+    document.getElementById('modalCatalogo').style.display = 'flex';
+}
+
+function renderizarCarrusel() {
+    const data = catalogoDetalle[carruselActual.categoria];
+    const foto = data.fotos[carruselActual.indice];
+    const modalBody = document.getElementById('modalCatalogoBody');
+
+    const tieneVariasFotos = data.fotos.length > 1;
+
+    modalBody.innerHTML = `
+        <h2 class="modal-title">${data.titulo}</h2>
+        <p style="font-size: 14px; color: #6d5b50; margin-bottom: 15px;">${data.descripcion}</p>
+
+        <div class="galeria-carrusel">
+            ${tieneVariasFotos ? `<button class="carrusel-btn prev" onclick="cambiarFoto(-1)">&#10094;</button>` : ''}
+            <div class="carrusel-img-container">
+                <img src="${foto.url}" alt="${foto.titulo}">
+            </div>
+            ${tieneVariasFotos ? `<button class="carrusel-btn next" onclick="cambiarFoto(1)">&#10095;</button>` : ''}
+        </div>
+
+        <div class="galeria-info">
+            <h3>${foto.titulo}</h3>
+            <p>${foto.info}</p>
+            <span class="contador-foto">${carruselActual.indice + 1} / ${data.fotos.length}</span>
+        </div>
+    `;
+}
+
+function cambiarFoto(direccion) {
+    const data = catalogoDetalle[carruselActual.categoria];
+    if (!data) return;
+
+    carruselActual.indice += direccion;
+
+    if (carruselActual.indice < 0) {
+        carruselActual.indice = data.fotos.length - 1;
+    } else if (carruselActual.indice >= data.fotos.length) {
+        carruselActual.indice = 0;
+    }
+
+    renderizarCarrusel();
+}
+
+function cerrarModalCatalogo() {
+    document.getElementById('modalCatalogo').style.display = 'none';
+}
+
+
+window.onclick = function(event) {
+    const modalServicio = document.getElementById('modalServicio');
+    modalCatalogo = document.getElementById('modalCatalogo');
+
+    if (event.target === modalServicio) {
+        cerrarModal();
+    }
+    if (event.target === modalCatalogo) {
+        cerrarModalCatalogo();
+    }
+};

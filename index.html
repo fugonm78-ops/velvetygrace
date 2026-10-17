@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velvet Grace | Salón de Uñas y Belleza</title>
+    <!-- Fuentes -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Rutas a CSS y JS -->
+    <link rel="stylesheet" href="estilo.css/estilo.css">
+    <script src="script.js/script" defer></script>
+</head>
+<body>
+
+    <header class="header">
+        <nav class="navbar">
+            <a href="#inicio" class="logo">Velvet&<span>Grace</span></a>
+            <ul class="nav-menu">
+                <li><a href="#inicio" class="nav-link">Inicio</a></li>
+                <li><a href="#servicios" class="nav-link">Servicios</a></li>
+                <li><a href="#catalogo" class="nav-link">Catálogo</a></li>
+                <li><a href="#especialistas" class="nav-link">Especialistas</a></li>
+                <li><a href="#contacto" class="nav-link">Contacto</a></li>
+                <li><a href="#reserva" class="nav-link btn-reserva">Agendar Cita</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="inicio" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <span class="hero-subtitle">✨ Cuidado y Elegancia para ti</span>
+                <h1 class="hero-title">El arte de la belleza en cada <span>detalle</span></h1>
+                <p class="hero-text">
+                    Transformamos tus uñas en auténticas obras de arte. Disfruta de un ambiente relajante, 
+                    productos de alta calidad y las últimas tendencias en manicura, pedicura y belleza.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#reserva" class="btn-primary">Reservar Cita</a>
+                    <a href="#servicios" class="btn-secondary">Ver Servicios</a>
+                </div>
+            </div>
+            
+            <div class="hero-image">
+                <div class="image-box">
+                    <div class="badge-experience">
+                        <span class="number">Lo Mejor</span>
+                        <span class="text">Siempre para Ti</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section id="servicios" class="servicios-section">
+        <div class="section-container">
+            <h2 class="section-title">Nuestros <span>Servicios</span></h2>
+            <p class="section-description">Haz clic en cualquier servicio para ver los detalles completos, precios y tiempos de realización.</p>
+            
+            <div class="cards-grid">
+                <div class="card" onclick="abrirModal('manicura-spa')">
+                    <span class="card-tag">Ver detalles</span>
+                    <h3>Manicura Spa</h3>
+                    <p>Cuidado completo con exfoliación, hidratación profunda y esmaltado de alta duración.</p>
+                    <span class="card-price">Desde L 200.00</span>
+                </div>
+
+                <div class="card" onclick="abrirModal('pedicura-spa')">
+                    <span class="card-tag">Ver detalles</span>
+                    <h3>Pedicura Spa</h3>
+                    <p>Tratamiento intensivo para pies suaves, descansados y con un acabado impecable.</p>
+                    <span class="card-price">Desde L 300.00</span>
+                </div>
+
+                <div class="card" onclick="abrirModal('unas-Postizas')">
+                    <span class="card-tag">Ver detalles</span>
+                    <h3>Uñas Postizas</h3>
+                    <p>Diseño y esculpido personalizado con las últimas tendencias del mercado.</p>
+                    <span class="card-price">Desde L 400.00</span>
+                </div>
+
+                <div class="card" onclick="abrirModal('cejas')">
+                    <span class="card-tag">Ver detalles</span>
+                    <h3>Cejas</h3>
+                    <p>Define tu rostro y potencia la expresión de tu mirada.</p>
+                    <span class="card-price">Desde L 150.00</span>
+                </div>
+
+                <div class="card" onclick="abrirModal('pestañas')">
+                    <span class="card-tag">Ver detalles</span>
+                    <h3>Pestañas</h3>
+                    <p>Resalta la belleza natural de tu mirada con nuestros servicios especializados.</p>
+                    <span class="card-price">Desde L 500.00</span>
+                </div>
+
+                <div class="card" onclick="abrirModal('maquillaje')">
+                    <span class="card-tag">Ver detalles</span>
+                    <h3>Maquillajes</h3>
+                    <p>Lleva tu look al siguiente nivel con un maquillaje profesional diseñado exclusivamente para ti.</p>
+                    <span class="card-price">Desde L 750.00</span>
+                </div>
+
+                <div class="card" onclick="abrirModal('peinado')">
+                    <span class="card-tag">Ver detalles</span>
+                    <h3>Peinados</h3>
+                    <p>Transforma tu cabello con un peinado profesional que refleje tu personalidad.</p>
+                    <span class="card-price">Desde L 450.00</span>
+                </div>
+
+                <div class="card" onclick="abrirModal('cuidado-facial')">
+                    <span class="card-tag">Ver detalles</span>
+                    <h3>Cuidado Facial</h3>
+                    <p>Dale a tu piel el cuidado que merece con nuestros tratamientos faciales profesionales.</p>
+                    <span class="card-price">Desde L 550.00</span>
+                </div>
+
+                <div class="card" onclick="abrirModal('depilacion')">
+                    <span class="card-tag">Ver detalles</span>
+                    <h3>Depilación</h3>
+                    <p>Disfruta de una piel increíblemente suave y libre de vello con nuestro servicio profesional.</p>
+                    <span class="card-price">Desde L 180.00</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Servicios -->
+    <div id="modalServicio" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="cerrarModal()">&times;</span>
+            <div id="modalBody"></div>
+        </div>
+    </div>
+
+    
+    <section id="catalogo" class="catalogo-section">
+        <div class="section-container">
+            <h2 class="section-title">Nuestro <span>Catálogo</span></h2>
+            <p class="section-description">Explora nuestra galería de trabajos realizados.</p>
+            
+            <div class="cards-grid">
+                <div class="card" onclick="abrirModalCatalogo('manicura-spa')">
+                    <span class="card-tag">Ver Galería</span>
+                    <h3>Catálogo Manicura</h3>
+                    <p>Explora diseños, acabados y transformaciones en manos.</p>
+                </div>
+
+                <div class="card" onclick="abrirModalCatalogo('pedicura-spa')">
+                    <span class="card-tag">Ver Galería</span>
+                    <h3>Catálogo Pedicura</h3>
+                    <p>Galería de acabados spa y cuidado para pies.</p>
+                </div>
+
+                <div class="card" onclick="abrirModalCatalogo('unas-Postizas')">
+                    <span class="card-tag">Ver Galería</span>
+                    <h3>Catálogo Uñas Postizas</h3>
+                    <p>Nail art, acrílico, polygel y tendencias exclusivas.</p>
+                </div>
+
+                <div class="card" onclick="abrirModalCatalogo('cejas')">
+                    <span class="card-tag">Ver Galería</span>
+                    <h3>Catálogo Cejas</h3>
+                    <p>Resultados de laminado, visagismo y henna.</p>
+                </div>
+
+                <div class="card" onclick="abrirModalCatalogo('pestañas')">
+                    <span class="card-tag">Ver Galería</span>
+                    <h3>Catálogo Pestañas</h3>
+                    <p>Efectos de extensiones y lifting de pestañas.</p>
+                </div>
+
+                <div class="card" onclick="abrirModalCatalogo('maquillaje')">
+                    <span class="card-tag">Ver Galería</span>
+                    <h3>Catálogo Maquillaje</h3>
+                    <p>Looks sociales, novias y eventos de gala.</p>
+                </div>
+
+                <div class="card" onclick="abrirModalCatalogo('peinado')">
+                    <span class="card-tag">Ver Galería</span>
+                    <h3>Catálogo Peinados</h3>
+                    <p>Recogidos, ondas y peinados para ocasiones especiales.</p>
+                </div>
+
+                <div class="card" onclick="abrirModalCatalogo('cuidado-facial')">
+                    <span class="card-tag">Ver Galería</span>
+                    <h3>Catálogo Cuidado Facial</h3>
+                    <p>Resultados de limpiezas e hidrafaciales.</p>
+                </div>
+
+                <div class="card" onclick="abrirModalCatalogo('depilacion')">
+                    <span class="card-tag">Ver Galería</span>
+                    <h3>Catálogo Depilación</h3>
+                    <p>Zonas de tratamiento y cuidados de la piel.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section id="especialistas" class="especialistas-section">
+    <div class="section-container">
+        <h2 class="section-title">Nuestras <span>Especialistas</span></h2>
+        <p class="section-description">Conoce al equipo de profesionales dedicadas a resaltar tu belleza y brindarte la mejor experiencia.</p>
+        
+        <div class="cards-grid">
+            <div class="card especialista-card">
+                <div class="especialista-img-box">
+                    <img src="" alt="">
+                </div>
+                <h3></h3>
+                <span class="card-tag">Master Nail Artist</span>
+                <p></p>
+            </div>
+
+            <div class="card especialista-card">
+                <div class="especialista-img-box">
+                    <img src="" alt="">
+                </div>
+                <h3></h3>
+                <span class="card-tag"></span>
+                <p></p>
+            </div>
+
+            <div class="card especialista-card">
+                <div class="especialista-img-box">
+                    <img src="" alt="">
+                </div>
+                <h3></h3>
+                <span class="card-tag"></span>
+                <p></p>
+            </div>
+
+           
+            <div class="card especialista-card">
+                <div class="especialista-img-box">
+                    <img src="" alt="">
+                </div>
+                <h3></h3>
+                <span class="card-tag"></span>
+                <p></p>
+            </div>
+
+           
+            <div class="card especialista-card">
+                <div class="especialista-img-box">
+                    <img src="" alt="">
+                </div>
+                <h3></h3>
+                <span class="card-tag"></span>
+                <p></p>
+            </div>
+
+           
+            <div class="card especialista-card">
+                <div class="especialista-img-box">
+                    <img src="" alt="">
+                </div>
+                <h3></h3>
+                <span class="card-tag"></span>
+                <p></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+    
+    <div id="modalCatalogo" class="modal">
+        <div class="modal-content modal-catalogo-content">
+            <span class="close-btn" onclick="cerrarModalCatalogo()">&times;</span>
+            <div id="modalCatalogoBody"></div>
+        </div>
+    </div>
+
+</body>
+</html>
